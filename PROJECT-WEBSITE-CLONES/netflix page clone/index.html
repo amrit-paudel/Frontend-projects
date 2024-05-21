@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-top">
+      <img src="https://i.ibb.co/r5krrdz/logo.png" alt="Netflix">
+      <a href="#" class=" btn round-btn">Sign in </a>
+    </div>
+
+    <div class="header-content">
+            <h1>See what's next </h1>
+            <p>Watch anywhere, cancel anytime</p>
+            <a href="#" class="btn rect-btn">Watch for 30 days
+               <i class="fas fa-chevron-right btn-icon"></i></a>
+    </div>
+  </header>
+
+  <!-- Sections begins -->
+<section class="tabs">
+    <div class="tab-container">
+        <div class="tab-item tab-border" id="tab1">                                               <!-- tab-border class because in java script we want to apply this to all those which are clicked by user -->                               <!-- all are given same name because same style is to be applied to all of them -->
+            <i class="fas fa-door-open fa-3x"></i>
+            <p class="hide-in-media-query">Cancel at any time</p>                                   <!-- this class namebecause in small screen we want to disappear out text -->
+        </div>
+
+        <div class="tab-item" id="tab2">
+            <i class="fas fa-tablet-alt fa-3x"></i>
+            <p class="hide-in-media-query">Watch anywhere</p>
+        </div>
+
+        <div class="tab-item" id="tab3">
+            <i class="fas fa-tags fa-3x"></i>
+            <p class="hide-in-media-query">Pick your price</p>
+        </div>
+    </div>
+</section>
+
+<!--Container -->
+<section class="tab-content">
+    <!-- container 1-->
+    
+     <div id="container1" class="container container-tab1 show">                                   <!-- given id so some java script with it. given class container to style given class show because we want it to show at first when page loads -->
+          <div class="text-n-btn">
+               <p>
+                    If you decide Netflix isn't for you - no problem. No commitment. Cancel online anytime.
+                </p>
+                 <a href="#" class="btn rect-btn container-btn">watch free for 30 days</a>
+            </div>
+            <div>
+                <img src="https://i.ibb.co/J2xDJV7/tab-content-1.png" alt="logo">
+            </div>
+    </div> 
+    
+    <!--Container 2 -->
+    <div class="container container-tab2" id="container2">
+        <div class="text-n-btn-row">
+            <p>
+                Watch TV shows and movies anytime, anywhere — personalized for you.
+            </p>
+            <a href="#" class="btn rect-btn">Watch free for 30 days </a>
+        </div>
+
+        <div class="tabs-container">
+            <div class="tabs">
+                <img src="https://i.ibb.co/DpdN7Gn/tab-content-2-1.png" alt="" />
+                <p class="highlight">
+                    Watch on your TV
+                </p>
+                <p class="less-highlight">
+                    Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.
+                </p>
+            </div>
+
+            <div class="tabs">
+                <img src="https://i.ibb.co/R3r1SPX/tab-content-2-2.png" alt="" />
+                <p class="highlight">
+                    Watch instantly or download for later
+                </p>
+                <p class="less-highlight">
+                    Available on phone and tablet, wherever you go.
+                </p>
+            </div>
+
+            <div class="tabs">
+                <img src="https://i.ibb.co/gDhnwWn/tab-content-2-3.png" alt="" />
+                <p class="highlight">
+                    Use any computer
+                </p>
+                <p class="less-highlight">
+                    Watch right on Netflix.com.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!--container 3-->
+
+    <div id="container3" class="container container-tab3">
+        <div class="text-n-btn-3">
+            <p>
+                Choose one plan and watch everything on Netflix.
+            </p>
+            <a href="#" class="btn rect-btn">WATCH FREE FOR 30 DAYS</a>
+        </div>
+
+        <div class="table-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>BASIC</th>
+                        <th>STANDARD</th>
+                        <th>PREMIUM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monthly price after free month ends on 6/19/19</td>
+                        <td>$8.99</td>
+                        <td>$12.99</td>
+                        <td>$15.99</td>
+                    </tr>
+
+                    <tr>
+                           <td>HD Available</td>
+                           <td><i class="fas fa-times"></i></td>
+                           <td><i class="fas fa-check"></i></td>
+                           <td><i class="fas fa-check"></i></td>
+                    </tr>
+
+                    <tr>
+                        <td>Ultra HD Available</td>
+                        <td><i class="fas fa-times"></i></td>
+                        <td><i class="fas fa-times"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                    </tr>
+
+                    <tr>
+                        
+                              <td>Screens you can watch on at the same time</td>
+                              <td>1</td>
+                              <td>2</td>
+                               <td>4</td>
+                    </tr>
+
+                    <tr>
+                        
+                              <td>Watch on your laptop, TV, phone and tablet</td>
+                             <td><i class="fas fa-check"></i></td>
+                             <td><i class="fas fa-check"></i></td>
+                             <td><i class="fas fa-check"></i></td>
+                    </tr>
+
+                    <tr>
+                        <td>Unlimited movies and TV shows</td>
+                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                    </tr>
+
+                    <tr>
+                        <td>Cancel anytime</td>
+                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                    </tr>
+
+                    <tr>
+                        <td>First month free</td>
+                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- now footer -->
+<footer>
+    <p>Questions? Call 1-866-579-7172</p>
+    <div class="links-container">
+        <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">Ways To Watch</a></li>
+            <li><a href="#">Corporate Information</a></li>
+            <li><a href="#">Netflix Originals</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Terms Of Use</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Redeem Gift Cards</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Speed Test</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Media Center</a></li>
+            <li><a href="#">Buy Gift Cards</a></li>
+            <li><a href="#">Cookie Preferences</a></li>
+            <li><a href="#">Legal Notices</a></li>
+        </ul>
+    </div>
+</footer>
+<script src="new1.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+   
+}
+
+/* stylling the images */   /* always remember this as default propeties used freauent;y 
+it solves most of the problems relate to the iages in our webpage */
+img{
+    max-width: 100%;
+    display: block;
+    margin-top:0.5rem;
+
+}
+
+body{
+    background-color: #ccc;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.togclass{                                              /* this class is to be added by the java script */
+    border-bottom: solid black 2px;
+}
+
+
+.header{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;                        /* whole content inside the header container is properly centered */
+    background-color: #f4f4f4;
+}
+
+.header>h1{
+    font-weight: 700;
+    padding: 0.1em 0 0.08em;
+    text-shadow: 0.5px 0.5px 2px #333;              /* sometimes it's better to put the shadow to our text */
+}
+.header>p{
+    font-size: 1rem;
+    padding: 0.1em 0.08em;
+}
+nav>ul{
+
+display: flex;
+list-style: none;padding: 0;
+justify-content: center;                              /* whole navitems is properly centered in the middle of the navbar container */
+background-color: #f4f4f4;
+
+}
+
+nav>ul>li{
+/*border: solid blue;*/
+padding-bottom: 0px;
+margin: 0.3em 4em;                                        /* In this way we arrange our nav items through margins not by any justify content property always  */
+}
+
+nav>ul>li>a{
+text-decoration: none;
+
+font-size: 1.4rem;
+
+}
+
+nav>ul>li>a:hover,nav>ul>li>a:focus{                    /*  Sometimes usually in the navbar links it is better to put the focus along with the hover pseudo class */
+    color: rgb(72, 141, 3);
+}
+.home-page{
+    color: rgb(72, 141, 3);
+    padding-bottom: 0.08em;
+    border-bottom:solid black 1.5px;
+}
+
+.head-container{
+    margin-top: 3em ;
+    width: 100%;
+}
+
+@media(max-width:700px){                                                          /* adding the media queries */
+      
+    .header{
+text-align: center;
+}
+       
+    nav>ul{
+
+          display: flex;
+          flex-direction: column;
+         
+          align-items: center;
+      }
+      nav>ul>li{
+          margin: 1.3em 0;
+      }
+}
+
+
+/* ------------------ NOW STYLLING THE BODY PART ---------------------------- */
+
+
+
+
+/* ------------------ */                                             
+  /*   typography  first  */
+
+
+  .article-title{
+    margin-bottom: 0.4em;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+
+.widget-title,.widget-recent-post-title{
+    margin-bottom: 1em;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.article-body,.widget-body,p{
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.article-info{
+    font-size: 0.8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    margin-bottom: 0.8em;
+}
+.article-read-more{
+    text-decoration: none;
+    color: rgb(78, 73, 73);
+    font-size: 1rem;
+    font-style: italic;
+    display: block;
+    margin-bottom: 1em;
+
+}
+.article-read-more:hover{
+    color: rgb(61, 59, 59);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* NOW STYLLING FOR THE MOBILE SCREEN THAN LATTER ON STYLLING ON THE BIG SCREEN  */
+
+
+.body-container{
+
+    width: 80%;
+    margin: 2em auto;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* NOW STYLLING FOR THE LARGE SCREEN BY THE HELP OF MEDIA QUERIES  */
+@media(min-width:700px){
+
+.body-container{
+ flex-direction: row;
+}
+main{width: 70%;}
+aside{width: 20%;}
+
+}
+
+/*A LITTLE BIT FOR FOOTER */
+footer{
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;                        /* whole content inside the header container is properly centered */
+    background-color: #f4f4f4;
+}
+
+.article-featured{
+   /* background-color: rgb(197, 171, 171);*/                /* HERE IS EVERYTHING THAT WE NEE TO KNOW SEE THIS VERY CAREFULLY */
+    padding: 0.3em 0.5em 0.2em;
+    border-bottom: solid black 1px;
+    margin-bottom: 3em;
+}
+
+/* CHANGING THE ORDER FOR THE IMAGE TO APPEAR FIRST BEFORE THE TEXT */
+
+.article-recent{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.article-recent-main{
+order: 2;
+}
+
+.article-recent-secondary{
+order: 1;
+}

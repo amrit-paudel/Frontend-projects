@@ -1,0 +1,96 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.grid{
+    width: 100%;
+    /*border: solid blue;*/
+    background-color: khaki;
+    display: grid;
+    
+
+    /* let first bring the grids i.e column lines and rows lines */
+
+   /* grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 50px 100px 100px 50px;*/
+
+    /*grid-template-areas: 'head head head'
+    'menu contxt contxt'
+    'menu contxt contxt'
+    'foot foot foot'
+    ;*/
+    grid-template: 'head head head' 200px
+    'menu contxt contxt' 200px
+    'menu contxt contxt' 200px
+    'foot foot foot' 200px/1fr 1fr 1fr
+
+}
+.grid>div{
+  /*  border: solid blue;*/
+   /* display: flex;     /*  SEE WE ARE USING BOTH GRID AND FLEX BOX TOGETHER */
+   /* justify-content: center;
+    align-items: center;*/
+}
+.head{
+grid-area: head;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+
+.head>li{
+   /* border: solid blue;*/
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border: solid blue;*/
+    
+}
+
+
+/* NOW I WILL BE USING THE PSEUDO CLAEES TO ACCESS THE CHILDS INSIDE THE HEAD */
+
+.head>li:nth-child(1){
+    background-color: rgb(138, 138, 245);
+    color: white;
+    font-size: 2vw;
+}
+.head>li:nth-child(2){
+    background-color: rgb(25, 235, 224);
+    color: white;
+    font-size: 2vw;
+}
+.head>li:nth-child(3){
+    background-color: rgb(250, 10, 150);
+    color: white;
+    font-size: 2vw;
+}
+
+.menu{
+grid-area: menu;
+background-color: coral;
+color: white;
+font-size: 4vw;
+text-align: center;
+
+}
+.contxt{
+grid-area: contxt;
+background-color: rgb(100, 98, 97);
+color: white;
+font-size: 4vw;
+text-align: center;
+}
+.foot{
+grid-area: foot;
+background-color: rgb(51, 219, 197);
+color: white;
+font-size: 2vw;
+text-align: center;
+}

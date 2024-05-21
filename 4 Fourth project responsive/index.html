@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Amrit Cafe </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        
+    <nav class="navlist">
+        <div class="logo">
+            <p>Amrit Cafe</p>
+        </div>
+        <div class="rightlist" id="list">
+            <a href="#" class="services">Services</a>
+            <a href="#" class="about">About US</a>
+            <a href="#" class="contact">Contact US</a>
+            <a href="#" class="iconbar" onclick="showbars()"><i class="fa fa-bars"></i></a>
+        </div>
+        
+    </nav>
+    <section>
+        <div class="intro">
+            <p> Welcome to Amrit Cafe . We are very delighted to hear from you.
+                Please feel free to allow ud to serve you. We are here to provide you the best experience of Nepalese coffee.
+                You can also order from your smart phone and allow us to serve you. We also provide various pasteies , cakes , laddus and other sweets.
+
+            </p>
+        </div>
+        <div class="lastlist">
+            <a href="#" class="order">Click to Order</a>
+            <a href="#" class="showmore">Show More</a>
+        </div>
+    </section>
+    </header>
+    <script>
+        var getbars=document.getElementsByClassName("rightlist");
+        if(getbars.style.display==="none"){getbars.style.display="block";}
+
+    </script>
+   
+</body>
+</html>

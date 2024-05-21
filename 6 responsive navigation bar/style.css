@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url("bullet.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);                       /* it means make the container uo to 0.5 degree opaque with the black color */
+    background-blend-mode: overlay;                               /* this propery is a must along with the backgeouund color rgba property */
+}
+.navbar{
+    
+    display: flex;
+    align-items: center;
+   background: rgba(0, 0, 0, 0.8);
+}
+.logo{
+    width: 40%;
+     ;
+    margin: 10px;
+    padding: 10px 20px 10px ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5 vw;
+    color: white;
+}
+.rightlist{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+}
+.rightlist li{
+  list-style-type: none;
+  text-transform: capitalize;
+   ;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.3vw;
+  padding: 10px;
+  color: white;
+}
+.rightlist li:hover{
+    background-color: royalblue;
+}
+.barlist{
+    border: solid blue ;
+    display: none;
+    flex-direction: column;
+    width: 35px;
+    height: 30px;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+.bar{
+    display: block;
+    border: solid blue;
+    width: 100%;
+    height: 33.33%;
+    padding: 2px;
+    background-color: white;
+}
+@media (max-width:900px){
+   
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+       
+    }
+    .barlist{
+        display: flex;
+    }
+    .rightlist{
+        display: none;
+        flex-direction: column;
+        height: 100vh;
+
+    }
+    .rightlist li{
+        border: solid blue;
+        padding: 10px 150px 10px;
+        font-size: 2.5vw;
+    }
+    .rightlist.open{
+        display: flex;
+    }
+}

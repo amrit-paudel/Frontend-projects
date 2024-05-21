@@ -1,0 +1,139 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.navbar{
+    display: flex;
+    
+}
+.navlist{
+
+display: flex;
+
+ align-items: center;
+
+width: 50%;
+
+
+}
+.navbar .navlist li a{
+    text-decoration: none;
+    color: white;
+}
+.navbar .navlist li a:hover{
+    color: blue;
+}
+.navbar .navlist li{
+    list-style: none;
+    padding: 35px;
+
+}
+
+.rightnav{
+
+width: 50%;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+
+}
+.logo img {
+  
+    width: 20%;
+   
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 20%;
+   
+}
+#search{
+    padding:10px;
+    border: solid white;
+    border-radius: 10px;
+    width: 30%;
+}
+.btn1{
+    font-size:25px;
+    border: solid white;
+    border-radius: 15px;
+    color: white;
+    background-color: black;
+}
+.btn1:hover{
+    font-size:25px;
+    border: solid brown;
+    border-radius: 15px;
+    color: brown;
+    background-color: black;
+}
+.background{
+    background: rgba(0, 0, 0, 0.8) url("nature.jpg");
+    background-blend-mode: color-burn;
+}
+.firsthalf{
+    width: 50%;
+}
+.secondhalf{
+    width: 50%;
+}
+img{
+    width: 50%;
+}
+.section{
+    display: flex;
+}
+.firsthalf{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    
+}
+.firsthalf p{
+    padding: 40px;
+}
+.firsthalf .large{
+ font-size: 50px;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ opacity: 0.3;
+ letter-spacing: 3px;
+ word-spacing: 5px;
+ white-space: nowrap;
+}
+.firsthalf .small {
+    font-size: 20px;
+    word-spacing: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0.8;
+}
+
+.secondhalf{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.secondhalf .first-image {
+    margin: 50px;
+  opacity: 0.6;
+  
+  
+}
+.secondhalf img{
+    border-radius: 5000px;
+    margin: 100px;
+    text-align: center;
+}
+.secondhalf .second-image{
+    margin: 50px;
+    opacity: 0.6;
+}
+span{
+    color: yellow;
+    opacity: 0.6;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+

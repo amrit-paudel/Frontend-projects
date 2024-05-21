@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #333;
+   
+}
+body{
+
+    
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ccc;
+    max-width: 1800px;                                      /* A very good habit of setting the maximun width  */
+    min-width: 100px;
+}
+
+nav{margin: 2.5rem auto;}              /* first stylling the nav bar */
+nav>ul>li{list-style-type: none;width: 100%;}
+nav>ul>li>a{text-decoration: none;display:inline-block;width: 100%;height:100%;display: flex;
+align-items: center;justify-content: center;font-size: 2rem;color: #333;background-color: #f4f4f4;margin: 0.5em;
+}
+nav>ul{display: flex;
+    justify-content: space-evenly;
+    height: 6rem;
+    
+}
+nav>ul>li>a:hover{background-color: #333;color: #ccc;}
+
+h1{font-size: 2rem;margin: 1em 0;}
+p{font-size: 1.3rem;}
+
+.section1{                                                       /* stylling the section 1*/
+    grid-gap: 1em;
+display: grid;
+grid-template-columns: 1fr 2fr 1fr;
+grid-auto-rows: auto;
+
+
+}
+
+.section2{                                                        /* stylling the section 2 */
+    grid-gap: 1em;
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    grid-auto-rows: auto;
+    
+}
+.col1{
+    
+    padding: 1em;
+    align-self: flex-start;
+    background-color: #ddd;
+}
+
+.col2{
+    
+    padding: 1em;
+    align-self: flex-start;
+    background-color: #ddd;
+}
+
+.col3{
+    
+    padding: 1em;
+    align-self: flex-start;
+    background-color: #ddd;
+}
+
+@media(max-width:700px){                                       /* now adding the media queries    */
+    nav>ul{display: flex;
+          flex-direction: column;
+          width: 70%;
+          margin: 0 auto;
+          
+          height: 100%;
+    }
+
+    .section1,.section2{
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        grid-gap: 1em;
+    }
+}

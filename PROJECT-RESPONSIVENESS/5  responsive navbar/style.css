@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: sans-serif;
+   
+}
+body{
+    width:80%;
+    margin: 0 auto;                                 /* by these two properties our body is not stretched from all over left to the right */
+
+    background-color: #ccc;
+    max-width: 1200px;
+}
+
+.header{
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;                        /* whole content inside the header container is properly centered */
+    background-color: #f4f4f4;
+    
+}
+.header>h1{
+    font-weight: 700;
+    padding: 0.25em 0.2em;
+    text-shadow: 0.5px 0.5px 2px #333;              /* sometimes it's better to put the shadow to our text */
+}
+.header>p{
+    font-size: 1.2rem;
+    padding: 0.25em 0.2em;
+}
+nav>ul{
+
+display: flex;
+list-style: none;
+padding: 0.5em 0;
+justify-content: center;                              /* whole navitems is properly centered in the middle of the navbar container */
+background-color: #f4f4f4;
+}
+
+nav>ul>li{
+
+margin: 0 2em;                                        /* In this way we arrange our nav items through margins not by any justify content property */
+}
+
+nav>ul>li>a{
+text-decoration: none;
+
+font-size: 1.4rem;
+padding: 0 0.18em;
+}
+
+nav>ul>li>a:hover,nav>ul>li>a:focus{                    /*  Sometimes usually in the navbar links it is better to put the focus along with the hover pseudo class */
+    color: rgb(72, 141, 3);
+}
+.home-page{
+    color: rgb(72, 141, 3);
+    padding-bottom: 0.08em;
+    border-bottom:solid black 1.5px;
+}
+
+.head-container{
+    margin-top: 3em ;
+    border: solid blue;
+}
+
+@media(max-width:600px){                                                          /* adding the media queries */
+      
+    .header{
+text-align: center;
+}
+       
+    nav>ul{
+
+          display: flex;
+          flex-direction: column;
+         
+          align-items: center;
+      }
+      nav>ul>li{
+          margin: 1.3em 0;
+      }
+}

@@ -1,0 +1,8 @@
+1) position:absolute  ,  also learned about some other position css properties 
+2) .navbar li : hover .submenu {
+
+}   
+     instead what i thought 
+                          .navbar li .submenu:hover  {
+3) use of new pseudo class
+                                         } 

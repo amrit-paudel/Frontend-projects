@@ -1,0 +1,75 @@
+
+
+/* IT SEEMS A BIT DIFFICULT TO CREATE BY THIS METHOS SO LETS TRY BY ANOTHER METHOD */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(204, 204, 204);
+}
+.grid{
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: repeat(12,1fr);
+}
+.head{
+grid-column: 1/-1;
+grid-row: span 3;
+background-color: rgb(104, 101, 101);
+}
+.menu{
+grid-column: 1/span 10;
+grid-row: span 6;
+
+background-color: rgb(122, 97, 97);
+}
+.contxt{
+grid-column: 11/span 10;
+grid-row: span 6;
+
+background-color: rgb(68, 48, 48);
+}
+.foot{
+    
+background-color: rgb(80, 73, 73);
+    grid-column: 1/-1;
+    grid-row: 10/span 3;
+}
+
+/*.grid{
+    width: 50%;
+    margin: 0 auto;
+    height: 50vh;
+    border: solid blue;
+    background-color: khaki;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 50px 1fr 1fr 50px ;
+    justify-content: center;
+}
+.head{
+grid-column: 1/-1;
+}
+.menu{
+grid-row: 2/-2;
+}
+.contxt{
+grid-column: 2/-1;
+grid-row: 2/-2;
+}
+.foot{
+grid-column: 1/-1;
+}*/
+.grid>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid blue;
+}

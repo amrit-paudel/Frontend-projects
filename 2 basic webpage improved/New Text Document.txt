@@ -1,0 +1,13 @@
+here I will not be using the background color rather i will be using <img> tag just to drop an image and i will 
+use the gradient in the background
+
+there are always two ways of adding images 
+1) by html using the <img> tag 
+2) by css /  so we will see latter which one is easy and follow that one .
+
+FOr images tryoto set the width of their container 
+and then seth the images width 100%, do not try to set height for images like
+    width:100%;
+    height:100%;   just won't work propertionally
+
+only set the width and height will get adjusted automaticly .

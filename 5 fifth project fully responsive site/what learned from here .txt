@@ -1,0 +1,3 @@
+1) how to make logo / logo image make go in porportiin along with the sizing of the navbar.
+2) also we don't need to use display:flex to allign the navbar items , we may also
+use display:block and latter made by adding some margin and padding .

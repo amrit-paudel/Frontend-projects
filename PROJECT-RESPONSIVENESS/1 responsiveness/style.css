@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: #ccc;
+    max-width: 1100px;                                          /* now the webpage won't be greater than the 1100px no matter how latge the screen size is */
+    margin: 0px auto;                                           /* and because of this the webpage will always seems at the middle of the screen */
+}
+:root{
+    --primary:#ddd;
+    --dark:#333;
+    --light:#fff;
+    --shadow:0.5px 1px 5px rgba(104,104,104,0.8);
+}
+
+/* stylling the landing page */
+.lpage{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.lpage-head{
+    border: solid blue;
+    width: 50%;                                             /* % used so responsiveness */
+    margin: 0 auto;                                        /* head container goes to the middle of the page */
+    text-align: center;
+    font-size: 2.25rem;                                  /* rem unit is used */
+    margin-bottom: 1em;                                 /* em unit is used for margin which is w.r.t the font size of the text */
+    padding: 0.1em;                                    /* again em unit in the padding */
+}
+
+.lpage-img{
+    width: 80%;
+    margin: 0 auto;
+    border: solid blue;
+  /*  height: 10vw;*/
+}
+.lpage-img>img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.content1 {
+    margin-top: 2rem;
+    display: flex;
+    color:var(--dark);
+    text-shadow: 2px 2px rgb(111, 0, 238) 4px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.col1{
+    width: 25%;
+    background-color: var(--primary);
+    padding: 1em;
+}
+.col2{
+    width: 40%;
+    background-color: var(--primary);
+    padding: 1em;                                   /* see padding is in em units */
+}
+.col3{
+    width: 25%;
+    background-color: var(--dark);
+    color: var(--primary);
+    padding: 1em;
+}
+
+
+.col1>h1{
+    font-size: 1.6rem;
+    margin-bottom: 0.6em;
+}   
+.col2>h1{
+    font-size: 2.2rem;
+    margin-bottom: 0.6em;                               /* again use of em unit in the margin responsiveness */
+}
+.col3>h1{
+    font-size: 1.6rem;
+    margin-bottom: 0.6em;
+}
+.col1>p{
+    font-size: 1rem;
+
+}   
+.col2>p{
+    font-size: 1.4rem;
+}
+.col3>p{
+    font-size: 1rem;
+}
+
+/* now content 2 */
+
+.content2 {
+    margin-top: 2rem;
+    display: flex;
+    color:var(--dark);
+    text-shadow: 2px 2px rgb(111, 0, 238) 4px;
+    justify-content: space-between;
+    align-items: flex-start;                        /* by default after display flex: the height of flex items was stretch */
+                                                     /* Now the content will start from the starting of the items and height will be as per the content*/
+}
+
+
+.content2-col1{
+    width: 50%;
+}
+.content2-col2{
+    width: 25%;
+    background-color: var(--dark);
+    color: var(--primary);
+}
+
+/* SINCE THE MEDIA QUERIES GETS RESETED BY THE DEFAULT OF WRITTEN ABOVE THE DEFAULT SO LETS WRITE THE MEDIA QUERIES AT THE END OF THE CSS CODE */
+
+
+
+@media (max-width:700px){
+    .content{
+        display: flex;
+        flex-direction: column;                      /* now the flex items will be aranged in rows order */
+    }
+    .col1,.col2,.col3{
+          width: 100%;
+    }
+}

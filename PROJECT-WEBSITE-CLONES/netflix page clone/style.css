@@ -1,0 +1,412 @@
+/* Global Styles */
+:root {
+	--primary-color: #e50914;
+	--dark-color: #141414;
+	--light-color: #f4f4f4;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+}
+h1,
+h2,
+h3,
+h4 {
+	color: #fff;
+}
+a {
+	color: #fff;
+	text-decoration: none;
+}
+p {
+	margin: 0.5rem 0;
+}
+
+body{
+    background: #000;
+    color: #999;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/************************************   I made these as my default stylling for every webpage and many more may come latter also ******************************************/
+
+
+/* stylling the header first */
+.header{
+    width: 100%;
+    height: 90vh;
+    position: relative;             /* because inside this any container might be placed of position absolute */
+    background-image: url("https://i.ibb.co/vXqDmnh/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /*background-color: rgba(0, 0, 0, 0.8);  
+    background-blend-mode:overlay;*/
+}
+.header::after{
+    content: "";                                        /* this one is a must to activate the pseudo class */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;                                    /* now based on z index of other container they will show in webpage */
+    background: rgba(0, 0, 0, 0.6);    /* it means allow 0.6 degree of opaque with the black color to the container where it is being applied  */
+    box-shadow: inset 50px 50px 200px #000000,inset -50px -50px 200px #000000;      /* this one beautifully spreads colors at left and top */
+                                  /* by negative value instead of left and top now applies to right and bottom and also 
+                                  because of black spray of color that attention auto goes to our content which is already in red color 
+                                  which is a attention grabbing color */
+}
+
+.header-top{
+    position: relative;
+    
+    width: 100%;
+    height: 100px;                                   /* if height was given in auto than image will move away from the container  */
+    z-index: 2;                             /* 2 is higher than that absolutely positioned overlay later so it will show up  */
+}
+.header-top>img{
+    width: 200px;
+    position: relative;
+    top: 50%;
+    left: 50%;                                     /* after this seems center from top and left but width and height of image are also counted*/
+    transform: translate(-50%,-50%);               /* it helps to eliminate that counted height and width */        
+}
+
+.header-top>a{
+    position:absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%,-50%);
+}
+
+
+
+/*buttons*/
+.btn{
+    display: inline-block;
+     background-color: var(--primary-color);
+     color: #ccc;
+     cursor: pointer;
+     font-size: 1.1rem;
+     text-align: center;
+     padding: 2px 5px;
+     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+     text-transform: uppercase;
+}
+.round-btn{
+    border-radius: 3px;
+}
+.rect-btn{
+font-size: 1.6rem;
+padding: 0.8rem 2rem;
+border-radius: 4px;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+/* buttons finished */
+.header-content{
+    position: relative; z-index: 3;  /* always  remember position is compulsary for z index to work */  
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    
+}
+.header-content>h1{
+    font-size: 4rem;
+    margin: 2rem 0px;
+}
+
+.header-content>p{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+
+
+/*stylling sections */
+.tab-container{
+    background-color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 25vh;
+    margin-bottom: 100px;
+    border-bottom: solid #3d3d3d 2px;
+}
+.tab-container>.tab-item{
+    
+    width: 20%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-size: 1.5rem;
+}
+.tab-container>.tab-item:hover{
+    cursor: pointer;
+    color: white;
+}
+
+.tab-border{                                                              /* this one is going  in the java script */
+    border-bottom: solid red 3px;
+}
+
+
+/* stylling the container 1 */
+.container{
+    width:80%;
+    margin: auto;
+}
+#container1{
+    
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.container>.text-n-btn{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.container>.text-n-btn{
+    
+    font-size: 2rem;
+    width: 90%;
+    margin: 0 auto;
+}
+.container-btn{
+    margin-top: 2.5rem;
+}
+#container2,#container3,#container1{display: none;}                                        /* temp */
+/*.container{display: none;}*/
+.show{display: block !important}                                                 /* without this !important that above id one will gets higher priority and our .show class will never works */
+
+/*stylling container 2 */
+.text-n-btn-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+.text-n-btn-row>p{
+    color:var(--light-color);
+    font-size: 1.4rem;
+}
+.tabs-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 0.5rem 1rem;
+    column-gap: 2rem;
+}
+.tabs-container>.tabs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tabs-container>.tabs>p.highlight{
+    font-size: 1.5rem;
+    color: var(--light-color);
+    text-align: center;
+}
+.tabs-container>.tabs>p.less-highlight{
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+/* stylling the container 3 */
+.text-n-btn-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   margin-bottom: 1.5rem;
+}
+.text-n-btn-3>p{
+    font-size: 2rem;
+    color: var(--light-color);
+    text-align: center;
+    padding: 10px 5px;
+}
+table{                                                      /* SEE THE STYLLING OF THE TABLE VERY CAREFULLY */
+    width: 100%;
+    border-collapse: collapse;
+}
+table>thead>tr>th{
+    color: var(--light-color);
+}
+table>tbody>tr>td{
+   
+    color: #999;
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+}
+table>tbody>tr>td:first-child{                                    /* now that which is first child mainly our written text of table will be alligned to left */
+    text-align: left;                                              /* but may be wondering all <td> has first child no they don't because they are not block element like <div>  and others */
+}
+table>tbody>tr:nth-child(odd){
+    background-color: var(--dark-color);
+}
+
+
+/* now stylling the footer */
+footer{
+    max-width: 80%;
+    margin: 3rem auto;
+    padding: 1rem 1rem;
+}
+footer>p{
+    font-size: 1.3rem;
+}
+footer>.links-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);                        /* first see the html code of the footer and then see this property here */
+    margin-top: 2rem;
+}
+footer>.links-container>ul>li>a{
+    font-size: 1rem;
+    color: #999;
+}
+footer>.links-container>ul>li{
+    padding: 0.4rem 0.2rem;
+}
+
+
+/*now adding a couple of media queries */
+@media(max-width:960px){
+    .header{
+        height: 70vh;
+    }
+    .header>.header-top>img{
+        top: 50%;
+        left: 25%;
+    }
+    
+.header-content>h1{
+    font-size: 3rem;
+    margin: 1rem 0px;
+}
+
+.header-content>p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.round-btn{
+    font-size: 1.5rem;
+    padding: 8px 15px;
+}
+.rect-btn{
+    font-size: 1.3rem;
+    }
+
+.tabs>.tab-container .hide-in-media-query{                                      /* here looking in the markup see the difference in using >  and not using > when specifying the classes  in css */
+   display: none;
+}
+.tabs>.tab-container i{                                      
+    font-size: 3rem;
+ }
+ #container3>.text-n-btn-3>p{
+   font-size: 1.8rem;
+   margin-bottom: 2rem;
+ }
+ #container3>.text-n-btn-3>a{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+table>tbody>tr>td{
+   color: #999;
+    padding: 1rem 1rem;
+    text-align: center;
+}
+table>thead>tr>th{
+    padding: 1rem 0;
+}
+
+}
+
+@media(max-width:650px){
+
+    /* responsiveness for container 1 */
+    .tab-container{
+        flex-direction: column;
+        height: 90vh;
+    }
+    .tabs>.tab-container .hide-in-media-query{                                      /* here looking in the markup see the difference in using >  and not using > when specifying the classes  in css */
+        display: block;
+     }
+     .tabs>.tab-container p{
+         font-size: 1rem;
+         text-align: center;
+     }
+     #container1>.text-n-btn p{
+         font-size: 1.6rem;
+     }
+     #container1>.text-n-btn a{
+        font-size: 1rem;
+    }
+
+
+    /* responsiveness for footer */
+    footer>.links-container{
+        grid-template-columns: repeat(2,1fr);                        /* first see the html code of the footer and then see this property here */
+        grid-gap: 2.5rem;
+    }
+    
+
+    /* responsiveness for container 2 */
+    .text-n-btn-row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+    }
+    .text-n-btn-row>p{margin-bottom: 2rem;}
+    .tabs-container{
+        margin-top: 4rem;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 4rem;
+    }
+
+
+    /* responsiveness for container 3 */
+
+    table{                                                      /* SEE THE STYLLING OF THE TABLE VERY CAREFULLY */
+        width: 100%;
+        border-collapse: collapse;
+    }
+    table>thead>tr>th{
+        color: var(--light-color);
+        font-size: 0.8rem;
+    }
+    table>tbody>tr>td{
+        font-size: 0.76rem;
+        color: #999;
+        padding: 0.8rem 1.2rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,4 @@
+1) read every piece of code of this project.
+2) see how the hover effect is effctively used .
+
+Here the main thing is the use of Absolute property 

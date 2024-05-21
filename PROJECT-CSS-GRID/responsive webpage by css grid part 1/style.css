@@ -1,0 +1,314 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    
+   
+}
+html{background-color: #ccc;}
+
+/*   FIRST OF ALL USING THE CSS VARIABLES ( it's a very good practice */
+
+:root{
+    --primary:#ddd;
+    --dark:#333;
+    --light:#fff;
+    --shadow:0.5px 1px 5px rgba(104,104,104,0.8);
+}
+
+/*  making the webpage a bit more stylish , so that everything don't start from left to right all over the page */
+
+body{
+    margin: 0 60px;
+}
+
+/* STYLLING THE NAV BAR AND IT'S ITEMS */
+
+nav>li>a{
+    
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0px 5px;
+    font-size: 1.5rem;
+}
+
+nav>li{
+    list-style-type: none;
+   
+    width: 20%;
+    text-align: center;
+}
+
+nav{
+
+margin-top: 15px;
+display: flex;
+justify-content: space-around;
+}
+
+/* ADDING THE HOVER EFFECT TO THE NAV BAR ITEMS */
+
+nav>li>a:hover{
+    cursor: pointer;
+    color: var(--light);
+    background-color: var(--dark);
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
+ 
+/* STYLLING THE SECTION 1 */
+
+ 
+ .sec1div1{
+background-image: url("https://images.pexels.com/photos/7112/woman-typing-writing-windows.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+background-position: center;
+background-size: cover;
+
+
+background-color: rgba(0,0,0,0.5);
+background-blend-mode: overlay;
+  /*  THESE TWO PROPERTIES REMEMBER THEM */
+
+
+margin-top: 20px;  /* MIGHT CHANGE FOR RESPONSIVENESS */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+grid-area: sec1div1;
+box-shadow: var(--shadow);
+
+ }
+ .sec1div1>h1{
+     color: var(--light);
+ }
+ .sec1div1>p{
+    color: var(--light);
+     
+ }
+
+ .sec1div2{
+    margin-top: 20px;
+
+ grid-area: sec1div2;
+ background-color: var(--primary);
+ box-shadow: var(--shadow);
+ 
+
+ /* FLEX BOX */
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+
+ }
+
+ .sec1div3{
+    margin-top: 20px;
+grid-area: sec1div3;
+
+/* FLEX BOX */
+display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ background-color: var(--primary);
+ box-shadow: var(--shadow);
+
+ }
+
+ /* NOW IT'S ALL ABOUT THE GRIDS */
+ .section1{
+     display: grid;
+     grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+     grid-auto-rows: 100px;
+
+     grid-template-areas: 
+     'sec1div1 sec1div1 sec1div1 sec1div1 sec1div2 sec1div2'
+     'sec1div1 sec1div1 sec1div1 sec1div1 sec1div2 sec1div2'
+     'sec1div1 sec1div1 sec1div1 sec1div1 sec1div3 sec1div3'
+     'sec1div1 sec1div1 sec1div1 sec1div1 sec1div3 sec1div3'
+     ;
+     column-gap: 120px;
+     row-gap: 50px;
+ }
+
+ .section1>div>h1{
+     font-size: 2rem;
+   padding: 5px;
+   margin: 20px 0;
+ }
+ .section1>div>p{
+    font-size: 1.3rem;
+    word-spacing: 3px;
+    letter-spacing: 5px;
+  }
+  .section1>.sec1div1>p{
+      margin-bottom: 20px;
+  }
+
+
+  /*-------------------------------------------------------------------------------------------------------*/
+
+/* STYLLING SECTION 2 */
+
+.section2{
+  margin-top: 20px;
+
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+  grid-auto-rows:100px;
+  grid-template-areas: 
+  'a m d s'
+  'a m d s'
+  ;
+  column-gap: 50px;
+}
+ 
+.section2>div>i{
+    font-size: 4vw;
+    color: var(--dark);
+}
+
+.section2>div{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.sec2div1{
+ grid-area: a;
+ background-color: var(--primary);
+ box-shadow: var(--shadow);
+}
+
+.sec2div2{
+   
+    grid-area: m;
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.sec2div3{
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+    grid-area: d;
+}
+
+.sec2div4{
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+    grid-area: s;
+}
+
+.section2>div>h4{
+    margin-top: 20px;
+    color: var(--dark);
+    font-size: 2vw;
+}
+.section2>div>p{
+    margin-top: 15px;
+    color: var(--dark);
+    font-size: 1vw;
+    text-align: center;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+/* STYLLING THE SECTION 3 */
+
+.section3{
+display: flex;
+margin-top: 35px;
+}
+.sec3div1{
+width: 40%;
+padding: 0px 10px;
+}
+.sec3div1>img{
+    width: 100%;
+    height: 100%;
+}
+
+.sec3div2{
+ width: 60%;
+ padding-left: 50px;
+}
+
+.sec3div2>h2{
+    text-align: left;
+    color: var(--dark);
+    font-size: 2vw;
+}
+.sec3div2>p{
+    text-align: left;
+    color: var(--dark);
+    font-size: 1vw;
+    margin-top: 10px;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+/* SECTION 4 */
+.section4{
+    margin-top: 50px;
+display: grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+column-gap: 20px;
+row-gap: 20px;
+}
+.section4>div{
+    padding: 5px;
+    background-color: var(--light);
+    box-shadow: var(--shadow);
+}
+.section4>div>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+/* STYLLING THE SECTION 5 */
+.section5{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+    margin-bottom: 60px;
+}
+.section5>p{
+    font-size: 1.3vw;
+    background-color: var(--primary);
+}
+section>div>button{
+    border-color: var(--dark);
+    border-bottom-style: var(--dark);
+    border-right-style: var(--dark);
+    font-size: 1.4vw;
+    background-color: var(--dark);
+    color: var(--primary);
+    padding: 8px 20px;
+}
+section>div>button:hover{
+    cursor: pointer;
+    border-color: var(--primary);
+    border-bottom-style: var(--primary);
+    border-right-style: var(--primary);
+    font-size: 1.4vw;
+    background-color: var(--primary);
+    color: var(--dark);
+    padding: 8px 20px;
+}
+
+
+

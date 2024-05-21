@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.box{
+  border: solid blue;
+  width: 100px;
+  height: 100px;
+  animation-name: boxanimation;
+  animation-duration: 5s;
+  animation-iteration-count: 5;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+  position: relative;
+}
+@keyframes boxanimation{
+  0%{background-color: khaki;border: solid blue 5px; top: 0;left: 0;}
+  25%{background-color: red;border: solid white 5px;border-top-right-radius: 75px;top: 0;left: 0;}
+  50%{background-color: blue;border: solid khaki 5px;border-top-right-radius: 75px;border-bottom-right-radius: 75px;top: 0;left: 300px;}
+  75%{background-color: green;border: solid yellow 5px;border-top-right-radius: 75px;border-bottom-right-radius: 75px;border-bottom-left-radius: 75px;top: 300px;left: 300px;}
+  100%{background-color: brown;border: solid orange 5px;border-top-right-radius: 75px;border-bottom-right-radius: 75px;border-bottom-left-radius: 75px;border-top-left-radius: 75px;top: 300px;left: 0;}
+}
+    </style>
+</head>
+<body>
+    <body>
+      <div class="box">
+
+      </div>
+    </body>
+</body>
+</html>
