@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        .flexbox{
+          
+          display: flex;
+          padding: 8px;
+          flex-wrap: wrap; /* set this for better responsiveness , if not understant than just recite . 
+          t know this effect set flex-basis:50% below and see due to wrap the unadjusted one gets down 
+          but set to nowrap than that flex:50% won't work . 
+          */
+          justify-content: center; /* set this also for better responsiveness */
+          
+        }
+        .flexitems{
+          
+          
+          padding: 2px;
+          flex: 25%; /* this one is super duper important here and for this to work properly set the flex-wrap:wrap not to nowrap
+         the width:100% set in the inline below is successfully managed by this property here so it's the main part of this format .*/ 
+        }
+        .flexitems img{
+          padding: 2px;
+          display: flex;
+          align-items: center; /* these two are also important for perfect centering of the each images .*/
+          justify-content: center;
+          
+        }
+        @media(max-width: 960px){ /* for width 0 to 960 px code inside this one is effectively execited */
+          .flexitems{
+            flex: 50%;
+            
+          }
+        }
+        @media(max-width: 600px){
+          .flexitems{
+            flex: 100%;
+            
+          }
+        }
+      .header{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+      .header h1{
+        font-size: 4vw; /* vw ( viewport width for better responsiveness )*/
+      }
+      .header p{
+        font-size: 2vw; /* vw ( viewport width for better responsiveness )*/
+      }
+
+       
+    </style>
+</head>
+<body>
+    <body>
+
+        <!-- Header -->
+        <div class="header">
+          <h1>Responsive Image Grid</h1>
+          <p>Resize the browser window to see the responsive effect.</p>
+        </div>
+        
+        <!-- Photo Grid -->
+        <div class="flexbox"> 
+          <div class="flexitems">
+            <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
+          </div>
+          
+          <div class="flexitems">
+            <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+          </div> 
+           
+          <div class="flexitems">
+            <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+          </div>
+          
+          <div class="flexitems">
+            <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+          </div>
+        </div>
+        
+        </body>
+</body>
+</html>

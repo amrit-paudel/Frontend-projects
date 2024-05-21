@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.header{
+    padding-top: 50px;
+    width: 70%;
+    height: 200vh;
+    background-color: khaki;
+    margin: 0px auto;
+   
+}
+.grid>div>img{
+    width: 100%;
+    height: 100%; /* on doing this the images fit perfectly inside theirs div container */
+    object-fit: cover; /* now the image will fit perfectly in the container */
+
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr)); /* columns are auto adjusted which means responsiveness */
+    grid-auto-rows: 100px;   /* here sometimes we need to use auto so the the width of our row is suto determined   whereas sometimes we ourself need to mention the width */     /* rows are auto created which also means responsiveness */
+    grid-gap: 8px;
+    grid-auto-flow: dense; /* it's a example of source order independence in css 
+    which means the order specified by markup is broken and items are fit as per the size of cells 
+    regardless of their normal order */
+}
+.horizontal{
+   /* grid-column: 1/span 2; this means starting from the 1st column line span two more columns which is not better
+   we maynot know start from which column line */
+   grid-column: auto/span 2; /* or we may also write just grid-column:span 2 which means whereever the images are they will span by 2 columns .*/
+}
+.vertical{
+    grid-row: auto/span 2; /* starting from any row line it will span two rows
+    we can also set grid-row:span 2 only also */
+}
+.big{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+#gbig{
+    grid-row: span 3;
+    grid-column: span 3;
+}
+
+/* Now doing all this there may be some gaps between the images */

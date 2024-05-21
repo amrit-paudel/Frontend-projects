@@ -1,0 +1,2 @@
+transition:all 1s ease-in-out;
+this one is kinda important so be aware of it

@@ -1,0 +1,4 @@
+1) very first prepare teh grid i.e by grid-templare-rows and by  grid-template-columns
+than column lines  and  row lines comes up than make the layout which makes it easy
+because we can latter modify those rows and columns latter
+2) can also use fr units.

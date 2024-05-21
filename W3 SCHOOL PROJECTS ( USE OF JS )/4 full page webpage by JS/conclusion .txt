@@ -1,0 +1,6 @@
+1) ususlly we write classname if we have to apply same property 
+for almost every element
+so classes are written everytime
+2) if we have to deal with eaach element seperately than we can add id also.
+3) what should happen after clicking that is done inside the java script.
+4) ALSO THE WEBPAGE IS ALWAYS BUILD IN PART BY PART GRADUALLY NOT DIRECTLY 

@@ -1,0 +1,218 @@
+/*
+
+HERE I AM GOING TO PUT BACKGROUND IMAGE BELOW THE NAVIGATION BAR , I.E NAVIGATION BAR ITEMS WON'T BE INCLUDED IN THE BACKGROUND IMAGE .
+
+*/
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa';
+   }
+   body{width: 100%;
+    height: auto; 
+   
+}
+header{  /* since we are creating only one webpage so that whole webpage is a header here so everything is inside the header here.
+    so we apply images and set some default images or gradient here inside whole header */
+     /* sometimes we set height to 100vh and sometimes to auto */                     /*  above two are the default properties in the css , can put them im every css */
+background-image:url("mountain.jpg");
+/* this will cause a little overlay type of effect */
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+background-color: rgb(241, 224, 146);
+background-blend-mode: overlay;
+/* could have been a different story if i had put this image inside the header */
+
+/* above are also kinda default properties to set the background images by css not by html */
+}
+.nav{
+    width: 100%;
+    
+   padding: 1em;
+   /* temp */
+    background-image: linear-gradient(-60deg,rgb(0, 247, 132),rgb(113, 252, 0));
+    
+    display: flex;
+      /* after this is not make font-size also responsive than in smaall screen text might be overflown */
+    font-size: 2rem;
+    text-transform: uppercase;
+   /* background-color: rgb(39, 225, 238);*/
+  
+}
+.rightnav{
+    
+    width: 50%;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-around;
+}
+.leftnav p{
+      /* easy to identify the css box so also easy to set the margin and padding */
+    margin-left: 25px;
+    font-size: 1.8rem;
+    padding: 0.1em;
+    background-color: rgb(241, 224, 146);
+    border-radius: 25px;
+}
+.rightnav a{
+     /* temp */  /* easy to identify the css box so also easy to set the margin and padding */
+    margin-left: 1em;
+    font-size: 1.5rem;
+    padding: 0.5em;
+    color: black;
+    
+}
+a{text-decoration: none;}
+.leftnav{
+    
+    width: 50%;
+    height: auto;
+    /* temp */
+    display: flex;
+    align-items: center;
+    
+}
+.section1{
+   /* temp */
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.welcome{
+    /* temp */
+  font-size: 4rem;
+  margin: 1em;
+  padding: 0.5em;
+
+  /* ADDING THE ANIMATION PROPERTIES */
+animation-name: welcome;
+animation-duration: 5s;
+animation-delay: 2s;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+}
+.visit{
+ /* temp */
+font-size: 2.5rem;
+margin: 1.3em;
+padding: 0.5em;
+}
+.section2{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.slogan{
+   
+    color: yellow;
+    font-size: 5rem;
+margin: 1.5em;
+padding: 0.5em;
+
+/* ADDING THE ANIMATION PROPERTIES */
+animation-name: slogan;
+animation-duration: 5s;
+animation-delay: 2s;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+
+}
+.lastlist{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: space-between;
+    
+}
+.lastlist a{
+   color: black;
+    font-size: 2rem;
+margin: 1.5em;
+padding: 0.5em;
+font-weight: bolder;
+
+    
+}
+
+/*  NOW ADDING HOVER EFFECT */
+.lastlist a:hover{
+    background-color:#1ce02c ;
+    border-radius: 25px;
+    
+}
+
+.rightnav a:hover{
+   
+ background-color: burlywood;
+ border-radius: 25px;
+ color: yellow;
+}
+
+
+
+
+
+/* ADDING THE ANIMATIONS */
+@keyframes welcome{
+    0%{color: #000000; }
+    25%{color: #ff0000;  }
+    50%{color: #0000ff;  }
+    100%{color: #ffff00;  }
+}
+
+@keyframes slogan{
+    0%{color: #ffff00; }
+    25%{color: #0000ff;  }
+    50%{color: #ff0000;  }
+    100%{color: #000000; }
+}
+
+@media(max-width:980px){
+
+    .nav{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .rightnav{
+        
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .leftnav{
+        
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .rightnav>a{
+       
+        margin: 1em;
+    
+    }
+    .lastlist{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

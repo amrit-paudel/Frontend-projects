@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 200vh;
+    background-image: url("village.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(0, 0, 0,0.5);
+    background-blend-mode: overlay;  /* this one is important , it's main part here */
+}
+.navbar{
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(4, 197, 100);
+    height: 15vh;
+    position: fixed;
+    top: 0px;
+}
+.navbar li{
+    
+    list-style-type: none;
+    margin: 10px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.navbar li a{
+   
+   text-decoration: none;
+   color: white;
+   text-transform: capitalize;
+   font-size: 1.5vw;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.navbar li:first-child{    /*  USE OF THIS PSEUDO CHILD FOR THE FIRST TIME */
+    background-color: springgreen;
+    border-radius: 10px;
+}
+
+.navbar .fa{
+    
+    padding: 5px;
+    margin: 5px;
+    font-size:1.5vw;
+    color: white;
+}
+
+.submenu1{
+    display:none;   /*  SEE BELOW ONLY WHEN THE MOUSE HOVERS THAN ONLY THE SUB MENU IS SHOWN */
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    
+   position: absolute;  /*  MAIN PART IN HERE */
+    top:10vh;  /* just because of some ineffective values of this property the hover effect was not working so much effectively at the first time */
+    margin-top: 0px;
+    background-color: rgb(4, 197, 100);
+    padding-top: 5px;
+   
+    
+}
+.submenu1 a{
+   
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+   
+}
+
+.submenu1 a:hover{
+    background-color:springgreen;
+}
+.navbar li:hover .submenu1{   /*  WHEN WE HOVER THAN LI HAVING SUBMENU IT WILL SHOW OFF , TO UNDERSTAND
+    SUCH COMMENTED PROPERTIES FIRST COMMENT THOSE PROPERTIES , USE THEM AS WANTED THEN SEE AND OBSERVE THE DIFFERENCE */
+
+    display: flex;
+
+}
+
+/* ADDING THE HOVER EFFECT */
+.navbar li:hover  {
+    background-color: springgreen;
+    border-radius: 10px;
+}

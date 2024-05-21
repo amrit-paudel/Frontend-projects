@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding-right: 0px;
+}
+
+#navbar{
+   
+    display: flex;
+    align-items: center;  /*  by this our logo image also will be alligned at the vertiacally center so when we resize also
+    it again alligned in the center so , it seems like the logo also gets resized in a porportion with the navbar
+    just try out by commenting this one resize the window  */
+    
+    height: 15vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+#logo{
+    border:solid white;
+    border-radius: 100px;
+    border-width: 15px;
+    width: 10%;
+    overflow: hidden;  /* this one is important one here */
+    display: flex;
+
+    /* ADDING ANIMATION */
+    animation-name: border;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+}
+#logo img{
+    width: 100%;
+    height: 100%;
+}
+/* now stylling the right list ,  here I won't be using display:flex;  and justify-content:center , another new method see it */
+.rightlist{
+   
+    display: block;
+    padding: 10px;
+    margin-left: 50px;
+}
+.rightlist a{
+    text-decoration: none;
+   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2vw;
+    margin-left: 20px;
+    color: white;
+    border: solid white;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 25px;
+    
+
+}
+
+
+/* HOVER EFFECT */
+.rightlist a:hover{
+  color: yellow;
+  border: solid yellow;
+  background-color: black;
+}
+
+/* ANIMATION PROPERTY */
+@keyframes border{
+    0%{border: solid white;}
+    50%{border: solid yellow;}
+    100%{border: solid rgb(0, 255, 255);}
+
+}
+
+/* Now stylling the section begins */
+.section1{
+    width: 100%;
+   height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+    /* SETTING THE IMAGE */
+    background-image: url("veg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: overlay;
+    margin-bottom: 0px;
+    position: relative;  
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url("food.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.55);
+    background-blend-mode: overlay;
+}
+.section1head{
+   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2vw;
+    padding: 5px 10px 5px;
+    margin: 50px 0px 60px;
+    color: rgb(240, 240, 240);
+    
+}
+.section1para{
+   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5vw;
+    white-space:pre-line;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 10px 5px 10px;
+    margin: 50px 0px 60px;
+    
+}
+.btn1{
+   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5vw;
+    padding: 0px 5px 0px;
+    border-radius: 25px;
+    margin: 10px 0px 40px;
+}
+
+/* APPLYING THE HOVER EFFECT TO THE BUTTON */
+.btn1:hover{
+    color: white;
+    border: solid white;
+    background-color: black;
+}
+
+/* stylling the section 2 */
+.section2{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     /*  temp   */;
+    /* setting the background  image*/
+
+    width: 100%;
+   height: auto;   /*  IT'S   COMPULSARY  IN EVERY SECTION ELEMENT */
+    background-image: url("cheese.jpg");
+    background-color: rgba(0, 0, 0, 0.55);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.services{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.s2head{
+    border: solid white ;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 30px 0px 35px;
+    border-radius: 25px;
+    padding: 0px 10px 0px;
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+}
+.services li img {
+    width: 20vw;  /*   after setting width height is managed automaticly*/
+    height: auto;
+    padding: 5px ;
+    border-radius: 200px;
+}
+.services li a {
+    text-decoration: none;
+    display: block;
+    color: white;
+   
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.7vw;
+    margin: 10px 0px 2px;
+    padding: 10px;
+    border-radius: 25px;
+}
+.services li{
+   
+    margin: 20px 80px 10px ;
+    
+} 
+
+/* APPLYING THE HOVER EFFECT */
+.services li a:hover{
+    color: black;
+    border: solid black;
+    background-color: white;
+}
+
+.section3{
+    width: 100%;
+   height: auto;
+    background-image: url("food.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+
+    /* common flex related coding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.s3head{
+  
+    margin: 50px 0px 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2vw;
+    color: white;
+    padding: 10px 50px 10px;
+    background-color: teal;
+    border-radius: 25px;
+}
+.clients{
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+.clients img{
+    
+    width: 10%;    /*  HEIGHT IT WILL MANAGE ITSELF AUTO */
+}
+.microsoft{
+    height: 100px;
+    display: flex;
+    align-self: center;  /*       IMPORTANT USE OF THE align-self property in the flex items      */
+
+}
+.section4{
+   
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: auto;
+
+   /* setting the background image in this section also */
+   background-image: url("foodplate.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-color: rgba(0, 0, 0, 0.5);
+   background-blend-mode: overlay;
+   position: relative;
+}
+.s4head{
+    
+    margin: 50px 0px 50px;
+    padding: 20px 0px 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3vw;
+    color: white;
+    text-shadow: 1px 1px;
+    text-align: center;
+}
+form{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0px 100px;
+}
+form label{
+  
+    padding: 20px ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2vw;
+    color: white ;
+}
+form input{
+    
+    padding-top: 25px;
+    padding-right: 30vw;
+    background-color: rgb(149, 153, 153);
+    border-color: none;
+    border: none;
+    
+}
+
+/* NOW LITTLE TRY IN MAMING SITE RESPONSIVE */
+@media (max-width:775px){
+    .services{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .clients{
+   
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+        .clients img{
+            margin: 5vh;
+           }
+           .section1head{
+               margin-bottom: 4vh;
+               font-size: 3vw;
+           }
+           .section1para{
+               margin-top: 0px;
+               margin-bottom: 3vh;
+               font-size: 2.3vw;
+           }
+           .btn1{
+               margin-top: 0vh;
+               font-size: 3vw;
+           }
+           .s2head{
+               font-size: 3vw;
+           }
+           .services li a{
+               font-size: 2.5vw;
+           }
+           .s4head{
+               font-size: 4vw;
+           }
+           .section4 label{
+               font-size: 4vw;
+           }
+}

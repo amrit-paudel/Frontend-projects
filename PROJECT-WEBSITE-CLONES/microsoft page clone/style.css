@@ -1,0 +1,431 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+a{
+    color: #262626;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    padding: 0;
+
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto 50px;                                                  /* whole container would be perfectly alligned at the center */
+    max-width: 1200px;                                             /* we don't want our container to grow as large as the screen allow */
+}
+
+/* now sty;;ing the navigation bar */
+.main-nav{
+    
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    font-size: 15px;
+}
+.main-nav .logo{
+    
+    width: 110px;
+}
+.main-nav>.main-menu{
+    
+    width: 60%;
+    display: flex;
+    margin-left: 20px;
+}
+.main-nav>.right-menu{
+    display: flex;
+    justify-content: flex-end;
+    
+    width: 40%;
+    
+}
+.main-nav>.main-menu>li>a{
+                                      /* here without the padding which comes auto by markup was quite tedious so done this */
+    padding: 2px;
+}
+.main-nav>.main-menu>li{
+    padding: 0 5px;
+    
+}
+.main-nav>.main-menu>li>a:hover{
+    border-bottom: solid black 2px;
+}
+
+.main-nav>.right-menu>li>a:hover{
+    border-bottom: solid black 2px;
+}
+
+  /* below see another method also */                                                               /* this seems a bit more longer and also takes more code see another method */
+
+/*.main-nav>ul{
+    display: flex;
+}
+.logo{
+    width: 110px;
+}
+.main-nav>ul>li{
+    
+    padding: 0 10px;
+
+}
+.main-nav>ul>li>a{
+    
+    padding-bottom: 3px;
+}
+.main-nav>ul>li>a:hover{
+    border-bottom: solid black 2px;
+}
+.main-nav ul.main-menu{
+    flex: 1;
+    margin-left: 1em;
+}
+
+*/                                                                    /* but since here every container is not distributed by percentage so while decreasing screen size contant may flown outside the nav bar */
+
+
+
+/************ stylling showcase header  ****************/
+
+.showcase{
+    
+    background-image: url('https://i.ibb.co/zGSDGCL/slide1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.showcase>h2{margin-top: 100px;}
+.showcase>p{margin-top: 20px;}
+.showcase>.btn{ margin-top: 20px; padding:5px 10px;color: #ccc;background-color: #333;font-weight: 700;}
+.showcase>.btn:hover{
+    background-color: rgb(110, 96, 96);
+    color: rgb(255, 255, 255);
+}
+
+
+
+/***********border* STYLLING HOME CARDS **************/
+
+.home-cards{
+margin-top: 0.5em;
+
+width: 100%;
+display: grid;
+grid-template-columns: repeat(4,1fr);
+}
+
+.home-cards>.columns> img,h3,p{margin-bottom: 1em;padding: 10px 10px;text-align: left;}
+.home-cards>.columns>a{padding: 0 10px;
+color: blue;
+font-size: 1.3rem;
+}
+
+
+
+/******************* stylling the xbox *******************/
+
+
+
+.xbox{
+    
+    margin-top: 1em;
+    background-image: url('https://i.ibb.co/tBJGPD9/xbox.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.xbox>.content{
+    
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 35%;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 1em;
+}
+.xbox>.content>a{
+    
+    padding: 8px 18px;
+    margin: 0 10px;
+    font-size: 1.3rem;
+    color: #ccc;
+    background-color: #333;
+    font-weight: 700;
+}
+.xbox>.content>a:hover{background-color: #444;}
+
+
+
+
+/*********************  Again stylling the home cards **********************/
+
+.home-cards-2{
+    margin-top: 0.5em;
+
+width: 100%;
+display: grid;
+grid-template-columns: repeat(4,1fr);
+}
+
+.home-cards-2>.columns> img,h3,p{margin-bottom: 0.5em;padding: 5px 10px;text-align: left;}
+.home-cards-2>.columns>a{padding: 0 10px;
+color: blue;
+font-size: 1.3rem;
+}
+
+
+
+
+/****************** now stylling the carbon class *****************/
+.carbon{
+    
+    
+    margin-top: 1em;
+    background-image: url('https://i.ibb.co/72cgtsz/carbon.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+}
+
+.carbon>.content{
+    width: 50%;
+    height: 100%;
+    color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+.carbon>.content>h2,p,a{
+    padding: 10px 20px;
+}
+.carbon>.content>a{
+    margin-left: 20px;
+    
+background-color: #f4f4f4;
+color: #333;
+font-size: 1.4rem;
+font-weight: 600;
+}
+
+
+
+/********************** follow class stylling ************************/
+.follow{
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.2rem;
+    
+}
+
+
+
+/*******************  stylling the links *****************/
+.inner-links{
+    
+    display: flex;
+}
+.inner-links>ul{
+    
+    width: 17%;
+}
+.inner-links>ul>li{
+    font-size: 14px;
+    
+    margin: 1em 0;
+}
+.inner-links>ul>li>a{
+    display: block;
+    text-align: left;
+}
+
+
+
+
+/*********************** stylling the footer ***********************/
+.inner-footer{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+}
+.inner-footer>div{
+
+padding: 10px 15px;
+width: 100%;
+}
+.inner-footer>ul{
+    margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+.inner-footer>ul>li{
+    
+    margin: 5px 10px;
+}
+.inner-footer>ul>li>a{                                             /* so that text will appear perfectly alligned from the left with the changing size of viewport 
+    
+    */
+    display: block;
+    text-align: left;
+}
+
+/* adding media queries */
+@media(max-width:800px){
+.home-cards{
+grid-template-columns: repeat(2,1fr);
+}
+.home-cards-2{
+    grid-template-columns: repeat(2,1fr);
+    }
+.follow{
+    flex-direction: column;
+    align-items: flex-start;
+}
+.inner-links{
+    flex-direction: column;
+}
+.inner-links>ul{
+    width: 100%;
+}
+.inner-footer{
+    font-size: 10px;
+    
+}
+.inner-footer>ul{
+    flex-wrap: wrap;
+}
+.inner-footer>ul>li{
+    margin: 5px 5px;
+    padding: 10px;
+}
+
+.inner-footer>ul>li>a{
+    margin: 0;
+    padding: 0;
+}
+.inner-footer>div{
+    margin: 5px 5px;
+    padding: 0;
+}
+.xbox>.content>p{
+    display: none;
+}
+.xbox>.content>h2{
+ padding:5px 10px;
+}
+.xbox>.content>.btn{
+margin: 20px 20px;
+}
+.xbox>.content{
+    width: 40%;
+}
+
+}
+@media(max-width:500px){
+    .home-cards{
+        grid-template-columns: repeat(1,1fr);
+     }
+        .home-cards-2{
+            grid-template-columns: repeat(1,1fr);
+         }
+.columns{
+    margin: 40px 0;
+    width: 100%;
+}
+.columns>img{
+    width: 100%;
+}
+.main-menu{
+    font-size: 10px;
+}
+}
+
+
+
+
+/* now stylling that button hamburger type menu button */
+.menu-btn{
+    position: absolute;
+    top: 20px;
+    right:44px;
+    cursor: pointer;
+    display: none;
+ 
+}
+.menu-btn:hover{
+    opacity: 0.3;
+}
+
+/* NOW STYLLING THE NAVIGATION AS in mobile screen */
+@media(max-width:800px){
+    .menu-btn{display: block;}
+
+    .main-nav ul.main-menu{
+       
+        position: absolute;
+        background-color: #f2f2f2;
+        opacity: 0.8;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transition: transform 0.8s ease-in-out;                        /* THIS MIGHT NOT BE USED ALWAYS */
+        transform: translate(-500px);
+       /* display: none;*/
+    }
+    .main-menu>li{
+        width: 50%;
+        position: relative;
+        top: 40px;
+        margin: 30px 30px;
+        text-align: center;
+        justify-content: center;
+        border-bottom: solid black 1px;
+    }
+    .right-menu{
+        position: relative;
+        left: 100px;
+    }
+    .main-nav ul.main-menu.show{                                         /* such naming is very important */
+        transform: translateX(-20px);                                    /* this one is main part can also be done by the display property */
+      /*display: block;*/
+    }
+}

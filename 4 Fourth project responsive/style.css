@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("https://images.pexels.com/photos/129207/pexels-photo-129207.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    width: 100%;
+    height: 100vh;  /* if somehow our header view becomes large than 1 viewport than i will set auto latter*/
+
+}
+.navlist{
+    
+    /* temp*/
+    display: flex;
+    margin-top: 2vh; /* for this text must also be set to responsive i.e vw units */
+    padding: 20px;
+    
+}
+@keyframes logo{
+    0%{color: yellow;}
+    50%{color: rgb(255, 238, 0);  }
+    100%{color: green;  border: }
+}
+.logo{
+    width: 50%;
+    padding-left: 3vw;
+    vertical-align: middle;
+    
+}
+.logo p{
+    color: yellow;
+    width: 5.5vw;
+   
+    font-size: 1.4vw;
+    margin-right: 5px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    text-shadow: 1px 1px;
+    font-family: 'Montserrat', sans-serif;
+    padding:5px;
+    animation-name: logo;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.rightlist{
+   
+    display: flex;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px;
+}
+.services{
+    color: white;
+    
+    text-decoration: none;
+    font-size: 2.5vw;
+    padding: 5px;
+}
+.about{
+    color: white;
+    text-decoration: none;
+    font-size: 2.5vw;
+    padding: 5px;
+}
+.contact{
+   color: white;
+    text-decoration: none;
+    font-size: 2.5vw;
+    padding: 5px;
+}
+section{
+    display: flex;
+    
+    margin-top:0px; 
+}
+.intro{
+    width: 50%;
+    color: white;
+    margin: 0px;
+    text-align: justify;
+    padding: 0px;
+    font-size: 2vw;
+    font-family: 'Montserrat', sans-serif;
+   
+    display: flex;
+    align-items: flex-start;
+    padding-top: 20px; 
+    padding-left: 2.5vw;
+    
+}
+.lastlist{
+    width: 50%;
+    
+    margin: 10px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+.order{
+   color: white;
+    text-decoration: none;
+    font-size: 2.5vw;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px;
+    border: solid white;
+    border-radius: 25px;
+}
+.showmore{
+    color: white;
+    text-decoration: none;
+    font-size: 2.5vw;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px;
+    border: solid white;
+    border-radius: 25px;
+}
+.showmore:hover{
+    color: yellow;
+    border: solid yellow;
+}
+.order:hover{
+    color: yellow;
+    border: solid yellow;
+}
+.services:hover{
+    color: yellow;
+}
+.about:hover{
+    color: yellow;
+}
+.contact:hover{
+    color: yellow;
+}
+
+.burger{display: none;}
+.burger div{
+width: 22px;
+height: 3px;
+background-color: white;
+margin: 5px;
+}
+
+
+
+/* MARING THE WEBSITE MORE RESPONSIVE */
+@media  (max-width:803px) {
+    .intro{
+        width: 50%;
+        color: white;
+        margin: 0px;
+        text-align: justify;
+        padding: 0px;
+        font-size: 2vw;
+        font-family: 'Montserrat', sans-serif;
+       
+        display: flex;
+        align-items: center;
+        padding: 20px; 
+        padding-left: 2.5vw;
+        height: 50vh;
+       
+    }
+}
+@media (max-width:600px){
+    .lastlist{
+        padding: 20px;
+        width: 50%;
+        
+        margin: 10px;
+        height: 45vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        
+        
+    }
+    .order{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width:600px){
+    .services,.about,.contact{display: none;}
+    .iconbar{
+        display: inline-block;
+        
+        color: white;
+        
+    }
+}
+@media (min-width:600px){  /* ANALYZE THIS VERY PROPERLY */
+    .iconbar{display: none;
+    
+    }
+}
